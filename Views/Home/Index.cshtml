@@ -1,0 +1,56 @@
+﻿@using MvcApp.ViewModels;
+@model List<JsonVm>
+@{
+    ViewData["Title"] = "Dashboard";
+    List<JsonVm> data = Model;
+}
+
+<h2 class="display-4 text-center">Retrive data from data.json with Product ID</h2>
+<hr />
+<form method="post">
+    <div class="row">
+        <div class="col-md-3">
+            <label>Product ID</label>
+            <input name="productId" value="@ViewBag.productId" class="form-control" autofocus />
+        </div>
+        <div class="col-md-3">
+            <br />
+            <button class="btn btn-primary btn-block" type="submit">Retrive</button>
+        </div>
+    </div>
+</form>
+<br />
+<div class="text-center">
+    @{
+        if (data is not null && data.Count() > 0) {
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Service Name</th>
+                        <th>Provider Name</th>
+                        <th>Begin Time</th>
+                        <th>End Time</th>
+                    </tr>
+                </thead>
+                @foreach (var item in data) {
+                    <tbody>
+                        <tr>
+                            <td>@item.Service.Name</td>
+                            <td>@item.Provider.Name</td>
+                            <td>@item.BeginTime</td>
+                            <td>@item.EndTime</td>
+                        </tr>
+                    </tbody>
+                }
+            </table>
+        }
+        else {
+            if (ViewBag.error is not null) {
+                <h3 class="alert alert-danger">@ViewBag.error</h3>
+            }
+            else {
+                <h3 class="alert alert-warning">No data on found!</h3>
+            }
+        }
+    }
+</div>

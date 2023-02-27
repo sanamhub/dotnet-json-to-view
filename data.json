@@ -1,0 +1,35 @@
+[
+  {
+    "Service": {
+      "Name": "Recall Visit"
+    },
+    "Provider": {
+      "ProviderId": 1,
+      "Name": "Dr Frank Liu"
+    },
+    "BeginTime": "02:00PM",
+    "EndTime": "03:00PM"
+  },
+  {
+    "Service": {
+      "Name": "Requirement gathering"
+    },
+    "Provider": {
+      "ProviderId": 2,
+      "Name": "Mr Lawrence"
+    },
+    "BeginTime": "05:00PM",
+    "EndTime": "06:00PM"
+  },
+  {
+    "Service": {
+      "Name": "Deployment"
+    },
+    "Provider": {
+      "ProviderId": 3,
+      "Name": "Mr Ding Hai"
+    },
+    "BeginTime": "10:00AM",
+    "EndTime": "11:00AM"
+  }
+]
