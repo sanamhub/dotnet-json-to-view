@@ -14,7 +14,8 @@ public class HomeController : Controller {
 
     public IActionResult Index() {
         try {
-            return View(new List<JsonVm>());
+            var vm = GetVmFromJson();
+            return View(vm ??= new List<JsonVm>());
         }
         catch (Exception ex) {
             _logger.LogError(ex, $"Error at {nameof(Index)}");

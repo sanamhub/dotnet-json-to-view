@@ -5,17 +5,18 @@
     List<JsonVm> data = Model;
 }
 
-<h2 class="display-4 text-center">Retrive data from data.json with Product ID</h2>
+<h3 class="display-4 text-center">Retrieve data from data.json with Product ID</h3>
 <hr />
 <form method="post">
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-3" style="text-align: right">
             <label>Product ID</label>
+        </div>
+        <div class="col-md-4">
             <input name="productId" value="@ViewBag.productId" class="form-control" autofocus />
         </div>
-        <div class="col-md-3">
-            <br />
-            <button class="btn btn-primary btn-block" type="submit">Retrive</button>
+        <div class="col-md-4">
+            <button class="btn btn-primary btn-block" type="submit">Retrieve</button>
         </div>
     </div>
 </form>
